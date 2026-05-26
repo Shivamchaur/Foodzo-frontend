@@ -7,7 +7,7 @@ const Recipes = () => {
 
   useEffect(() => {
     const loadRecipes = async () => {
-      const response = await fetch('https://foodzo-backend.vercel.app/api/recipes');
+      const response = await fetch('/api/recipes');
       const result = await response.json();
       setRecipes(result);
       setStatus('ready');
