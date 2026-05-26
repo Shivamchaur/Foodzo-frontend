@@ -18,7 +18,7 @@ const Products = () => {
     const query = new URLSearchParams();
     if (searchText) query.set('search', searchText);
     if (category && category !== 'all') query.set('category', category);
-    const response = await fetch(`/api/products?${query.toString()}`);
+    const response = await fetch(`https://foodzo-backend.vercel.app/api/products?${query.toString()}`);
     const data = await response.json();
     setProducts(data);
     setStatus('ready');
